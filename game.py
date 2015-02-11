@@ -3,9 +3,11 @@ import random
 from nltk.corpus import brown
 
 if __name__ == "__main__":
-    words = brown.tagged_words()
+    print "loading...."
+    words = brown.tagged_words(tagset="universal")
     nouns = []
     for word, tag in words:
-        if tag == "NN":
+        if tag == "NOUN":
             nouns.append(word)
-    print random.choice(nouns), random.choice(nouns)
+    while raw_input("-->") is not "q":
+        print random.choice(nouns), random.choice(nouns)
