@@ -9,5 +9,6 @@ if __name__ == "__main__":
     for word, tag in words:
         if tag == "NOUN":
             nouns.append(word)
-    while raw_input("-->") is not "q":
+    print "loaded"
+    while raw_input("--> ").lower() not in ["q", "quit", "exit"]:
         print random.choice(nouns), random.choice(nouns)
